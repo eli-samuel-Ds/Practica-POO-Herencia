@@ -8,29 +8,27 @@ namespace practicaOOPHerencia
 {
     internal class Profesor : Persona
     {
-        //Atributos
-        private List<Curso> Curso { get; set; }
+        public List<Curso> Cursos { get; private set; }
 
-        //Constructor
         public Profesor(string nombre) : base(nombre)
         {
-            this.Curso = new List<Curso>();
+            Cursos = new List<Curso>();
         }
 
-        //Comportamientos
         public void AgregarCurso(Curso curso)
         {
-            Curso.Add(curso);
+            Cursos.Add(curso);
         }
 
         public string VerCursos()
         {
-            string cursos = "";
-            foreach (Curso curso in Curso)
+            string cursosDetalles = "";
+            foreach (var curso in Cursos)
             {
-                cursos += curso.VerDetalles() + "\n";
+                cursosDetalles += curso.VerDetalles() + "\n";
             }
-            return cursos;
+
+            return cursosDetalles;
         }
     }
 }

@@ -8,19 +8,16 @@ namespace practicaOOPHerencia
 {
     internal class Estudiante : Persona
     {
-        //Atributos
-        private int NumeroUnico;
+        public int NumeroUnico { get; private set; }
 
-        //Constructor
         public Estudiante(string nombre, int numeroUnico) : base(nombre)
         {
-            this.NumeroUnico = numeroUnico;
+            NumeroUnico = numeroUnico;
         }
 
-        //Comportamientos
         public string VerInformacion()
         {
-            return $"Nombre: {Nombre}, Numero Unico: {NumeroUnico}";
+            return $"Nombre: {Nombre}, Número Único: {NumeroUnico}";
         }
     }
 }

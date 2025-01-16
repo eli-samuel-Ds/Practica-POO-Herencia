@@ -8,10 +8,8 @@ namespace practicaOOPHerencia
 {
     public abstract class Persona
     {
-        //Atributos
-        protected string Nombre { get; set; }
+        public string Nombre { get; set; }
 
-        //Constructor
         public Persona(string nombre)
         {
             this.Nombre = nombre;

@@ -8,34 +8,30 @@ namespace practicaOOPHerencia
 {
     internal class Curso
     {
-        //Atributos
-        private string Nombre { get; set; }
-        private int RecuentoClases { get; set; }
-        private int RecuentoEjercicios { get; set; }
+        public string Nombre { get; private set; }
+        public int RecuentoClases { get; private set; }
+        public int RecuentoEjercicios { get; private set; }
 
-        //Constructor
         public Curso(string nombre, int recuentoClases, int recuentoEjercicios)
         {
-            this.Nombre = nombre;
-            this.RecuentoClases = recuentoClases;
-            this.RecuentoEjercicios = recuentoEjercicios;
+            Nombre = nombre;
+            RecuentoClases = recuentoClases;
+            RecuentoEjercicios = recuentoEjercicios;
         }
 
-        //Comportamientos
-        public int ActualizarRecuentoClases(int nuevasClases)
+        public void ActualizarRecuentoClases(int nuevasClases)
         {
-            return RecuentoClases = nuevasClases;
+            RecuentoClases = nuevasClases;
         }
 
-        public int ActualizarRecuentoEjercicios(int nuevasClases)
+        public void ActualizarRecuentoEjercicios(int nuevosEjercicios)
         {
-            return RecuentoEjercicios = nuevasClases;
+            RecuentoEjercicios = nuevosEjercicios;
         }
 
         public string VerDetalles()
         {
-            return $"Nombre: {Nombre}, Recuento de Clases: {RecuentoClases}, " +
-                $"Recuento de Ejercicios: {RecuentoEjercicios}";
+            return $"Nombre: {Nombre}, Recuento de Clases: {RecuentoClases}, Recuento de Ejercicios: {RecuentoEjercicios}";
         }
     }
 }
